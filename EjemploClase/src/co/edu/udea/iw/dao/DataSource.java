@@ -39,14 +39,8 @@ public class DataSource {
 		}catch(SQLException e){
 			throw new MyException("Ha ocurrido un error estableciendo "
 					+ "conexion con la base de datos",e);
-		}finally{
-			try {
-				con.close();
-			} catch (SQLException e) {
-				e.printStackTrace();
-			}
 		}
 		return con;
-}
+	}
 
 }
